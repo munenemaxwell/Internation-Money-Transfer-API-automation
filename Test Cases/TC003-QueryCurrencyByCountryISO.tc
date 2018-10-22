@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>query currency for a country using country iso</description>
+   <name>TC003-QueryCurrencyByCountryISO</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dcf296ea-998e-489a-b2af-845d76a7594c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test case to ascertain a channel can send a request to send money to and a wester union agent via IMT</description>
+   <name>TC009-SendToAgent</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fabbae52-3213-43c9-8571-b022466a546f</testCaseGuid>
+</TestCaseEntity>

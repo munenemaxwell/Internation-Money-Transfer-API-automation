@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Custotomer opt in to IMT service by providing location and accepting terms and conditions
+
+Precondition
+MSISDN does not exist in IMT Tibco GW database</description>
+   <name>TC001-Opt_in</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ea937d89-f857-4aa3-92d4-8ef151e42934</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,61 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+IMT_SIT_TEST_SUITE,,Test Suite for international money transfer system intergration tests,2018-10-05 15:51:24,2018-10-05 15:51:44,20.093s,FAILED
+,,,,,,
+Test Cases/TC003-QueryCurrencyByCountryISO,,query currency for a country using country iso,2018-10-05 15:51:25,2018-10-05 15:51:27,2.121s,PASSED
+Statement - var = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(IMTQueryCurrencyByCountryISO)),,,2018-10-05 15:51:26,2018-10-05 15:51:27,1.142s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:27,2018-10-05 15:51:27,0.029s,PASSED
+Statement - responseText = var.getResponseText(),,,2018-10-05 15:51:27,2018-10-05 15:51:27,0.014s,PASSED
+Statement - jsonObject = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:27,2018-10-05 15:51:27,0.045s,PASSED
+verifyMatch,,,2018-10-05 15:51:27,2018-10-05 15:51:27,0.065s,PASSED
+verifyMatch,,,2018-10-05 15:51:27,2018-10-05 15:51:27,0.004s,PASSED
+verifyMatch,,,2018-10-05 15:51:27,2018-10-05 15:51:27,0.002s,PASSED
+,,,,,,
+Test Cases/TC005-IMTCustomerInfo,,retrieve customer infomation using a channel from IMT Tibco GW,2018-10-05 15:51:27,2018-10-05 15:51:29,1.479s,PASSED
+Statement - cust_info = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(IMTCustomerInfo)),,,2018-10-05 15:51:28,2018-10-05 15:51:29,0.734s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:29,2018-10-05 15:51:29,0.002s,PASSED
+Statement - responseText = cust_info.getResponseText(),,,2018-10-05 15:51:29,2018-10-05 15:51:29,0.001s,PASSED
+Statement - cust_response_object = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:29,2018-10-05 15:51:29,0.001s,PASSED
+"Statement - If (ResponseCode == ""4000"")",,,2018-10-05 15:51:29,2018-10-05 15:51:29,0.002s,PASSED
+Statement - Else,,,2018-10-05 15:51:29,2018-10-05 15:51:29,0.012s,PASSED
+,,,,,,
+Test Cases/TC001-Opt_in,,"Custotomer opt in to IMT service by providing location and accepting terms and conditions
+
+Precondition
+MSISDN does not exist in IMT Tibco GW database",2018-10-05 15:51:29,2018-10-05 15:51:30,1.034s,FAILED
+Statement - optin_response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(Opt_in)),,,2018-10-05 15:51:29,2018-10-05 15:51:30,0.551s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:30,2018-10-05 15:51:30,0.005s,PASSED
+Statement - responseText = optin_response.getResponseText(),,,2018-10-05 15:51:30,2018-10-05 15:51:30,0.001s,PASSED
+Statement - optin_response_object = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:30,2018-10-05 15:51:30,0.002s,PASSED
+verifyMatch,,,2018-10-05 15:51:30,2018-10-05 15:51:30,0.005s,FAILED
+,,,,,,
+Test Cases/TC002-Opt_out,,Opt out of IMT service by providing MSISDN and reason for opting out,2018-10-05 15:51:30,2018-10-05 15:51:31,1.043s,PASSED
+Statement - opt_out_response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(Opt_out)),,,2018-10-05 15:51:30,2018-10-05 15:51:31,0.528s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:31,2018-10-05 15:51:31,0.002s,PASSED
+Statement - responseText = opt_out_response.getResponseText(),,,2018-10-05 15:51:31,2018-10-05 15:51:31,0.001s,PASSED
+Statement - optout_response_object = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:31,2018-10-05 15:51:31,0.002s,PASSED
+"Statement - If (ResponseCode == ""4000"")",,,2018-10-05 15:51:31,2018-10-05 15:51:31,0.001s,PASSED
+Statement - Else,,,2018-10-05 15:51:31,2018-10-05 15:51:31,0.009s,PASSED
+,,,,,,
+Test Cases/TC006-FeeInquiry,,testcase to ascertain successfully fee/cost enquiry from western union IMT GW,2018-10-05 15:51:31,2018-10-05 15:51:42,11.343s,FAILED
+Statement - fee_response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(FeeInquiry)),,,2018-10-05 15:51:31,2018-10-05 15:51:42,10.677s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:42,2018-10-05 15:51:42,0.011s,PASSED
+Statement - responseText = fee_response.getResponseText(),,,2018-10-05 15:51:42,2018-10-05 15:51:42,0.002s,PASSED
+Statement - fee_response_object = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:42,2018-10-05 15:51:42,0.002s,PASSED
+Statement - println(ResponseCode),,,2018-10-05 15:51:42,2018-10-05 15:51:42,0.010s,PASSED
+verifyMatch,,,2018-10-05 15:51:42,2018-10-05 15:51:42,0.011s,FAILED
+,,,,,,
+Test Cases/TC007-PaymentTransaction,,test case to ascertain that a channel can issue a payment request to IMT Tibco GW and issue STK Push from MPESA GW,2018-10-05 15:51:42,2018-10-05 15:51:43,0.894s,FAILED
+Statement - payment_response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(PaymentTransaction)),,,2018-10-05 15:51:43,2018-10-05 15:51:43,0.052s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:43,2018-10-05 15:51:43,0.002s,PASSED
+Statement - responseText = payment_response.getResponseText(),,,2018-10-05 15:51:43,2018-10-05 15:51:43,0.001s,PASSED
+Statement - payment_response_object = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:43,2018-10-05 15:51:43,0.001s,PASSED
+verifyMatch,,,2018-10-05 15:51:43,2018-10-05 15:51:43,0.002s,FAILED
+,,,,,,
+Test Cases/TC004-IMTFrequentRecipient,,Test case to ascertain a channel is unable to get frequent recepients for a target MSISDN from IMT Tibco GW,2018-10-05 15:51:43,2018-10-05 15:51:44,1.233s,PASSED
+Statement - frequent_recep_resp = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(IMTFrequentRecipient_negative)),,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.664s,PASSED
+verifyResponseStatusCode,,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.002s,PASSED
+Statement - responseText = frequent_recep_resp.getResponseText(),,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.001s,PASSED
+Statement - frequent_recep_object = new groovy.json.JsonSlurper().parseText(responseText),,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.001s,PASSED
+verifyMatch,,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.002s,PASSED
+verifyMatch,,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.001s,PASSED
+verifyMatch,,,2018-10-05 15:51:44,2018-10-05 15:51:44,0.001s,PASSED

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Opt out of IMT service by providing MSISDN and reason for opting out</description>
+   <name>TC002-Opt_out</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>15cf70d1-a53d-478a-93ed-96524e1b296e</testCaseGuid>
+</TestCaseEntity>

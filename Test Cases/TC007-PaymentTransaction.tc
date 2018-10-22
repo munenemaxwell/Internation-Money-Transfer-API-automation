@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>test case to ascertain that a channel can issue a payment request to IMT Tibco GW and issue STK Push from MPESA GW</description>
+   <name>TC007-PaymentTransaction</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>01fe9c0f-bce4-407c-975f-5815c0e02b4d</testCaseGuid>
+</TestCaseEntity>

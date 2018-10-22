@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>test case to ascertain that a channel can initiate a send to bank operation via IMT</description>
+   <name>TC008-IMTSendToBank</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d805058b-266b-436a-8272-3b68d6586c52</testCaseGuid>
+</TestCaseEntity>
